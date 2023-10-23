@@ -3,7 +3,7 @@
 - [Bert_vits2](https://github.com/fishaudio/Bert-VITS2)
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
-请确保已经安装pyton3.9.0，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。<br>
+**请确保已经安装pyton3.9.0，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
 文件比较大github放不下<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
@@ -19,7 +19,10 @@ logs<br>
 - otto
   - G_114514.pth
   - config.json
-## 如果你是Manyana用户
+# 使用
+## 对接到QQ机器人
+现有方案 [Manyana](https://github.com/avilliai/Manyana) 已经完成对接
+#### Manyana用户操作指北
 请填写Manyana/config/bert_vits2.yaml，里面有填写示例<br>
 先启动Manyana，随后执行 启动脚本.bat 即可<br>
 指令格式： xx说XXXXXXXXX 
@@ -47,3 +50,7 @@ api将接收五个参数，如果你不需要指定自己的模型，传前两�
 }
 ```
 api将返回语音的路径，代表成功保存了。
+
+# 声明
+**严禁将此项目用于一切违反《中华人民共和国宪法》，《中华人民共和国刑法》，《中华人民共和国治安管理处罚法》和《中华人民共和国民法典》之用途。**<br>
+**严禁用于任何政治相关用途。**
