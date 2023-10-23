@@ -70,7 +70,21 @@ api将接收五个参数，如果你不需要指定自己的模型(且使用了�
 }
 ```
 api将返回语音的路径，代表成功保存了。
+# 使用GPU加速
+如果你已经开始使用了，一定能感觉到，合成的速度并不能让人满意。<br>
+这时候，如果你有一张N卡，我们可以通过安装cuda,使用GPU加速来实现更快的语音合成。
+- [安装cuda](https://blog.csdn.net/weixin_45763636/article/details/123169495) 
+  - 上面的教程关于pytorch的部分不用看
+- [根据你的实际情况选择一个torch版本](https://pytorch.org/get-started/locally/)
+<img src="bert/chinese-roberta-wwm-ext-large/img.png">
+  - 复制蓝色部分
+- 在Bert_Vits_Sever所在目录打开cmd
+  - 依次输入如下指令
+  - cd venv/Scripts
+  - call activate.bat
+  - pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio===0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html(这是根据我的系统、包管理器、Python版本和CUDA版本所生成的，不一定适合你)
 
+重启即可
 # 声明
 **严禁将此项目用于一切违反《中华人民共和国宪法》，《中华人民共和国刑法》，《中华人民共和国治安管理处罚法》和《中华人民共和国民法典》之用途。**<br>
 **严禁用于任何政治相关用途。**
