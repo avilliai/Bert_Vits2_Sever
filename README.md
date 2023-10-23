@@ -16,6 +16,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 - pytorch_model.bin
 - tf_model.h5<br>
 #### 1.3获取模型
+[获取模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1) <br>
 创建logs文件夹，模型和配置文件的放置应当如下所示。注意它们在同一个文件夹即{角色名}文件夹内
 - Bert_Vits2_Sever/logs/{角色名}/{模型名(无所谓)}.pth
 - Bert_Vits2_Sever/logs/{角色名}/config.json
