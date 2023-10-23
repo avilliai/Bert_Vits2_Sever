@@ -3,7 +3,7 @@
 - [Bert_vits2](https://github.com/fishaudio/Bert-VITS2)
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
-**请确保已经安装pyton3.9.0，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
+**请确保已经安装[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
 文件比较大github放不下<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
