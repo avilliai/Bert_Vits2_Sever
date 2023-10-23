@@ -34,11 +34,11 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 测试用的代码放在test.py，**激活虚拟环境后**，运行test.py如果生成了test.wav，代表测试成功。
 # 安装更多模型
 把你的模型放在logs文件夹下的某一文件夹即可,如<br>
-logs<br>
-- otto
-  - G_114514.pth
-  - config.json
+新增一个otto语音模型则
+  - logs/otto/G_114514.pth
+  - logs/otto/config.json
 # 使用
+  要使用你的模型，需要在使用时传入对应的参数
 ## 对接到QQ机器人
 现有方案 [Manyana](https://github.com/avilliai/Manyana) 已经完成对接
 #### Manyana用户操作指北
