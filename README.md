@@ -77,12 +77,13 @@ api将返回语音的路径，代表成功保存了。
   - 上面的教程关于pytorch的部分不用看
 - [根据你的实际情况选择一个torch版本](https://pytorch.org/get-started/locally/)
 <img src="bert/chinese-roberta-wwm-ext-large/img.png">
+
   - 复制蓝色部分
 - 在Bert_Vits_Sever所在目录打开cmd
   - 依次输入如下指令
   - cd venv/Scripts
   - call activate.bat
-  - pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio===0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html (这是根据我的系统、包管理器、Python版本和CUDA版本所生成的，不一定适合你)
+  - pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio===0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html <br>(这是根据我的系统、包管理器、Python版本和CUDA版本所生成的，不一定适合你)
 
 重启即可
 # 声明
