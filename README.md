@@ -79,7 +79,7 @@ api将返回语音的路径，代表成功保存了。
 <img src="bert/chinese-roberta-wwm-ext-large/img.png">
 
   - 复制蓝色部分
-- 在Bert_Vits_Sever所在目录打开cmd
+- 在Bert_Vits_Sever文件夹打开cmd
   - 依次输入如下指令
   - cd venv/Scripts
   - call activate.bat
