@@ -4,7 +4,26 @@
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
 **请确保已经安装[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
-文件比较大github放不下<br>
+## 1、源码部署
+#### 1.1克隆仓库到本地
+找一个你喜欢的目录，打开cmd执行
+```
+git clone https://github.com/avilliai/Bert_Vits2_Sever.git
+```
+#### 1.2下载必要文件
+从[Huggingface](https://huggingface.co/spaces/XzJosh/Azusa-Bert-VITS2/tree/main/bert/chinese-roberta-wwm-ext-large) 下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large
+- flax_model.msgpack
+- pytorch_model.bin
+- tf_model.h5<br>
+#### 1.3获取模型
+创建logs文件夹，模型和配置文件的放置应当如下所示。注意它们在同一个文件夹即{角色名}文件夹内
+- Bert_Vits2_Sever/logs/{角色名}/{模型名(无所谓)}.pth
+- Bert_Vits2_Sever/logs/{角色名}/config.json
+#### 1.4安装必要环境并启动
+- 双击安装脚本.bat<br>
+- 双击启动脚本.bat<br>
+## 2、压缩包部署
+文件比较大github放不下，自带一个taffy模型<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
 - 百度网盘(待更新)<br>
@@ -31,13 +50,12 @@ logs<br>
 你可以用你喜欢的语言来调用这个api<br>
 在执行 启动脚本.bat 后<br>
 向http://localhost:9080/synthesize 发送post请求<br>
-api将接收五个参数，如果你不需要指定自己的模型，传前两个参数即可。
-- text 文本
-- out 语音保存路径(绝对路径，否则将以bert_vits2_sever为根目录保存在相对路径)
-(以下三项缺省选塔菲)
-- speaker 说话人
-- model 模型与配置文件路径(相对路径，以bert_vits2_sever为根目录)
-- lang 语言类型
+api将接收五个参数，如果你不需要指定自己的模型(且使用了压缩包部署里的模型)，传前两个参数即可。
+- text          文本
+- out           语音保存路径(绝对路径，否则将以bert_vits2_sever为根目录保存在相对路径)
+- speaker       说话人
+- model         模型与配置文件路径(相对路径，以bert_vits2_sever为根目录)
+- lang          语言类型，一般传 "[ZH]"
 
 以下是一个示例(json)
 ```
