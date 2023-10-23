@@ -11,7 +11,7 @@
 git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 ```
 #### 1.2下载必要文件
-从[Huggingface](https://huggingface.co/spaces/XzJosh/Azusa-Bert-VITS2/tree/main/bert/chinese-roberta-wwm-ext-large) 下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large
+从[Huggingface](https://huggingface.co/spaces/XzJosh/Azusa-Bert-VITS2/tree/main/bert/chinese-roberta-wwm-ext-large) **下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large文件夹**
 - flax_model.msgpack
 - pytorch_model.bin
 - tf_model.h5<br>
@@ -34,8 +34,9 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 #### 如果你需要测试服务是否可用
 测试用的代码放在test.py，**激活虚拟环境后**，运行test.py如果生成了test.wav，代表测试成功。
 # 安装更多模型
-把你的模型放在logs文件夹下的某一文件夹即可,如<br>
-新增一个otto语音模型则
+在logs文件夹下新建一个文件夹，如otto
+把你的模型和配置文件放进去<br>
+如新增一个otto语音模型则
   - logs/otto/G_114514.pth
   - logs/otto/config.json
 # 使用
