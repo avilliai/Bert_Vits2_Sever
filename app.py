@@ -71,7 +71,7 @@ def infer(text, lang,sdp_ratio, noise_scale, noise_scale_w, length_scale, sid):
         del x_tst, tones, lang_ids, bert, x_tst_lengths, speakers
         return audio
 
-def tts_fn(text, speaker,path, lang,sdp_ratio=0.2, noise_scale=0.6, noise_scale_w=0.8, length_scale=1.2):
+async def tts_fn(text, speaker,path, lang,sdp_ratio=0.2, noise_scale=0.6, noise_scale_w=0.8, length_scale=1.2):
     with torch.no_grad():
         audio = infer(text, lang,sdp_ratio=sdp_ratio, noise_scale=noise_scale, noise_scale_w=noise_scale_w, length_scale=length_scale, sid=speaker)
         wavfile.write(path, hps.data.sampling_rate, audio)
@@ -122,14 +122,14 @@ async def synthesize():
     speaker_ids = hps.data.spk2id
     speakers = list(speaker_ids.keys())
 
-    tts_fn(text, speaker, out,lang)
+    await tts_fn(text, speaker, out,lang)
     print("ok")
     return out
 
 if __name__ == "__main__":
 
 
-    if os.path.exists("logs/azusa/config.json'"):
+    if os.path.exists("logss/azusa/config.json'"):
         print(1)
 
 #    webbrowser.open("http://127.0.0.1:6006")
