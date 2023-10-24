@@ -78,7 +78,7 @@ def tts_fn(text, speaker,path, lang,sdp_ratio=0.2, noise_scale=0.6, noise_scale_
     return "Success", (hps.data.sampling_rate, audio)
 app1 = Flask(__name__)
 @app1.route('/synthesize', methods=['POST'])
-def synthesize():
+async def synthesize():
     # 解析请求中的参数
     data = request.get_json()
     data=json.loads(data)
@@ -129,7 +129,8 @@ def synthesize():
 if __name__ == "__main__":
 
 
-
+    if os.path.exists("logs/azusa/config.json'"):
+        print(1)
 
 #    webbrowser.open("http://127.0.0.1:6006")
 #    app.launch(server_port=6006, show_error=True)
