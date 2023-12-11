@@ -24,14 +24,18 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 #### 1.4安装必要环境并启动
 - 双击安装脚本.bat<br>
 - 双击启动脚本.bat<br>
+#### 更新
+双击update.bat
 ## 2、压缩包部署
-文件比较大github放不下，自带一个azusa模型。压缩包部署将不支持获取github更新(不过反正我也没写更新脚本)<br>
+文件比较大github放不下，自带一个azusa模型。压缩包部署将不支持获取github更新<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
 - [百度网盘](https://pan.baidu.com/s/1d5WKFYZ4yGAz09rbroqP2g?pwd=9uyg) 提取码：9uyg<br>
 
 2、双击安装脚本.bat<br>
 3、双击启动脚本.bat<br>
+#### 更新
+从git仓库下载源码压缩包，解压，替换同名文件
 #### 如果你需要测试服务是否可用
 测试用的代码放在test.py，**激活虚拟环境后**，运行test.py如果生成了test.wav，代表测试成功。
 # 安装更多模型
