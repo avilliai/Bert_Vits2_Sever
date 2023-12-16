@@ -10,10 +10,10 @@ proxies = {
             "https://": proxy
         }
 # 发送请求到后端服务
-url = "https://initially-messaging-coverage-paste.trycloudflare.com//synthesize" # 后端服务的地址
-params = {"text": "早上好，请关注我喵喵喵喵喵，你今天过得怎么样，开心吗", "out": "test.wav","speaker":"Azusa","model":["logs/test.pth","logs/config.json"],"lang":"[ZH]"} # 请求参数
+url = "https://regularly-speakers-external-transform.trycloudflare.com/synthesize" # 后端服务的地址
+params = {"text": "我的心情还不错，你呢", "out": "test.wav","speaker":"阿梓"} # 请求参数
 response = requests.post(url,json=json.dumps(params),proxies=proxies) # 发送post请求
-print(response.text)
-with open("audio.wav", "wb") as f:
+#print(response.text)
+with open("audio1.wav", "wb") as f:
     f.write(response.content)
 

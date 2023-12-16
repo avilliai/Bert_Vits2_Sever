@@ -51,7 +51,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 ## 对接到QQ机器人
 现有方案 [Manyana](https://github.com/avilliai/Manyana) 已经完成对接
 #### Manyana用户操作指北
-请填写Manyana/config/bert_vits2.yaml，里面有填写示例<br>
+请根据你的Bert_vits_sever/characters.yaml填写Manyana/config/settings.yaml，在bert_speakers填写所有你bert_vits中可用的角色<br>
 先启动Manyana，随后执行 启动脚本.bat 即可<br>
 指令格式： xx说XXXXXXXXX 
   
@@ -73,7 +73,8 @@ api将需要下面的参数
     "speaker":"塔菲",
 }
 ```
-api将返回语音的路径，代表成功保存了。
+api将返回语音的二进制文件，你需要保存它
+>如果你熟悉python，test.py里面是一个调用实例，但我更建议使用异步的httpx而不是requests来调用它
 # 使用GPU加速
 如果你已经开始使用了，一定能感觉到，合成的速度并不能让人满意。<br>
 这时候，如果你有一张N卡，我们可以通过安装cuda,使用GPU加速来实现更快的语音合成。
