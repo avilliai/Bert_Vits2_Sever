@@ -5,7 +5,7 @@
 # 部署
 ## 1、colab部署(推荐)
 [点击并依次运行即可](https://colab.research.google.com/drive/1n8lI6pOiDtli2zC5fL9PZ9TZqbOafqma?usp=sharing)
-## 2、本地部署
+## 2、源码部署
 **请确保已经安装[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
 #### 1.1克隆仓库到本地
 找一个你喜欢的目录，打开cmd执行
@@ -28,7 +28,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 - 双击启动脚本.bat<br>
 #### 更新
 双击update.bat
-## 2、压缩包部署
+## 3、压缩包部署
 文件比较大github放不下，自带一个azusa模型。压缩包部署将不支持获取github更新<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
