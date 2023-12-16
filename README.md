@@ -39,13 +39,14 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 #### 更新
 从git仓库下载源码压缩包，解压，替换同名文件
 #### 如果你需要测试服务是否可用
-测试用的代码放在test.py，**激活虚拟环境后**，运行test.py如果生成了test.wav，代表测试成功。
+测试用的代码放在test.py，**激活虚拟环境并安装了对应的模型后**，运行test.py如果生成了可用音频，代表测试成功。
 # 安装更多模型
 在logs文件夹下新建一个文件夹，如otto
 把你的模型和配置文件放进去<br>
 如新增一个otto语音模型则
   - logs/otto/G_114514.pth
   - logs/otto/config.json
+**以及，务必填写characters.yaml**
 # 使用
   要使用你的模型，需要在使用时传入对应的参数
 ## 对接到QQ机器人
@@ -56,6 +57,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 指令格式： xx说XXXXXXXXX 
   
 ## 自行调用api
+**务必确认已填写characters.yaml，你没有的模型对应的配置可以删除**<br>
 你可以用你喜欢的语言来调用这个api<br>
 在执行 启动脚本.bat 后<br>
 向http://localhost:9080/synthesize 发送post请求<br>
