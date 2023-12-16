@@ -3,10 +3,10 @@
 - [Bert_vits2](https://github.com/fishaudio/Bert-VITS2)
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
-**请确保已经安装[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
 ## 1、colab部署(推荐)
 [点击并依次运行即可](https://colab.research.google.com/drive/1n8lI6pOiDtli2zC5fL9PZ9TZqbOafqma?usp=sharing)
-## 2、源码部署
+## 2、本地部署
+**请确保已经安装[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
 #### 1.1克隆仓库到本地
 找一个你喜欢的目录，打开cmd执行
 ```
