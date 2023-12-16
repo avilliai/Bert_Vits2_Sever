@@ -4,7 +4,9 @@
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
 **请确保已经安装[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于使用了非此版本的py解释器部署此项目产生的报错请自行搜索解决。**<br>
-## 1、源码部署
+## 1、colab部署(推荐)
+[点击并依次运行即可](https://colab.research.google.com/drive/1n8lI6pOiDtli2zC5fL9PZ9TZqbOafqma?usp=sharing)
+## 2、源码部署
 #### 1.1克隆仓库到本地
 找一个你喜欢的目录，打开cmd执行
 ```
@@ -57,21 +59,18 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 你可以用你喜欢的语言来调用这个api<br>
 在执行 启动脚本.bat 后<br>
 向http://localhost:9080/synthesize 发送post请求<br>
-api将接收五个参数，如果你不需要指定自己的模型(且使用了压缩包部署里的模型)，传前两个参数即可。
+如果使用colab部署，笔记里面有写，自己看<br>
+api将需要下面的参数
 - text          文本
 - out           语音保存路径(绝对路径，否则将以bert_vits2_sever为根目录保存在相对路径)
-- speaker       说话人
-- model         模型与配置文件路径(相对路径，以bert_vits2_sever为根目录)
-- lang          语言类型，一般传 "[ZH]"
+- speaker       说话人(参考characters.yaml)
 
 以下是一个示例(json)
 ```
 {
     "text": "早上好，请关注我", 
     "out": "test.wav",
-    "speaker":"taffy",
-    "model":["logs/Taffy/G_15800.pth","logs/Taffy/config.json"],
-    "lang":"[ZH]"
+    "speaker":"塔菲",
 }
 ```
 api将返回语音的路径，代表成功保存了。
