@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 import json
 import sys, os
 
-from flask import request, Flask
+from flask import request, Flask, send_file
 from scipy.io import wavfile
 
 if sys.platform == "darwin":
@@ -124,12 +125,12 @@ async def synthesize():
 
     await tts_fn(text, speaker, out,lang)
     print("ok")
-    return out
+    return send_file(out, as_attachment=True)
 
 if __name__ == "__main__":
 
 
-    if os.path.exists("logss/azusa/config.json'"):
+    if os.path.exists("logss/azusa/config.json"):
         print(1)
 
 #    webbrowser.open("http://127.0.0.1:6006")
