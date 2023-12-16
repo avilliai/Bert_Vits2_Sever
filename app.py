@@ -2,6 +2,7 @@
 import json
 import sys, os
 
+import yaml
 from flask import request, Flask, send_file
 from scipy.io import wavfile
 
@@ -82,18 +83,18 @@ app1 = Flask(__name__)
 async def synthesize():
     # 解析请求中的参数
     data = request.get_json()
-    data=json.loads(data)
+    data = json.loads(data)
+    with open('config/settings.yaml', 'r', encoding='utf-8') as f:
+        result = yaml.load(f.read(), Loader=yaml.FullLoader)
+    speaker = data['speaker']
     text = data['text']
-    out=data["out"]
-    try:
-        speaker = data['speaker']
-        model = data['model']
-        lang=data["lang"]
-    except:
-        print("使用默认设置")
-        speaker = "taffy"
-        model = "./logs/Taffy/G_15800.pth"
-        lang="[ZH]"
+    out = data["out"]
+
+    mes=result.get(speaker)
+
+    model=mes.get("model")
+    lang=mes.get("lang")
+
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_dir", default=model[0], help="path of your model")
