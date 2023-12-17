@@ -64,14 +64,12 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 如果使用colab部署，笔记里面有写，自己看<br>
 api将需要下面的参数
 - text          文本
-- out           语音保存路径(绝对路径，否则将以bert_vits2_sever为根目录保存在相对路径)
 - speaker       说话人(参考characters.yaml)
 
 以下是一个示例(json)
 ```
 {
     "text": "早上好，请关注我", 
-    "out": "test.wav",
     "speaker":"塔菲",
 }
 ```

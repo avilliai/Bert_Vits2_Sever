@@ -23,9 +23,3 @@ otto:
     - logs/azuma/G_17400.pth
     - logs/azuma/config.json
   lang: "[ZH]"
-東雪蓮:
-  speaker: Azuma
-  model:
-    - logs/azuma/G_17400.pth
-    - logs/azuma/config.json
-  lang: "[ZH]"

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
+import random
 import sys, os
 
 import yaml
@@ -84,13 +85,18 @@ async def synthesize():
     # 解析请求中的参数
     data = request.get_json()
     data = json.loads(data)
-    with open('config/settings.yaml', 'r', encoding='utf-8') as f:
+    with open('characters.yaml', 'r', encoding='utf-8') as f:
         result = yaml.load(f.read(), Loader=yaml.FullLoader)
     speaker = data['speaker']
     text = data['text']
-    out = data["out"]
-
+    out = await random_str()
+    out="voices/"+out+".wav"
+    if speaker not in result:
+        return send_file("voices/错误时返回语音，请勿删除.wav", as_attachment=True)
+    else:
+        pass
     mes=result.get(speaker)
+    speaker=mes.get("speaker")
 
     model=mes.get("model")
     lang=mes.get("lang")
@@ -127,12 +133,27 @@ async def synthesize():
     await tts_fn(text, speaker, out,lang)
     print("ok")
     return send_file(out, as_attachment=True)
+async def random_str(random_length=6,chars='AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789'):
+    """
+    生成随机字符串作为验证码
+    :param random_length: 字符串长度,默认为6
+    :return: 随机字符串
+    """
+    string = ''
 
+    length = len(chars) - 1
+    # random = Random()
+    # 设置循环每次取一个字符用来生成随机数
+    for i in range(7):
+        string +=  ((chars[random.randint(0, length)]))
+    return string
 if __name__ == "__main__":
+    #print(os.listdir())
 
-
-    if os.path.exists("logss/azusa/config.json"):
+    '''if os.path.exists("characters.yaml"):
         print(1)
+    else:
+        print(2)'''
 
 #    webbrowser.open("http://127.0.0.1:6006")
 #    app.launch(server_port=6006, show_error=True)
