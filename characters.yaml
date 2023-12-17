@@ -23,3 +23,15 @@ otto:
     - logs/azuma/G_17400.pth
     - logs/azuma/config.json
   lang: "[ZH]"
+星瞳:
+  speaker: XingTong
+  model:
+    - logs/xingtong/G_15500.pth
+    - logs/xingtong/config.json
+  lang: "[ZH]"
+嘉然:
+  speaker: Diana
+  model:
+    - logs/diana/G_4800.pth
+    - logs/diana/config.json
+  lang: "[ZH]"
