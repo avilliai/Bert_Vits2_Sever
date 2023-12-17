@@ -52,7 +52,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 ## 对接到QQ机器人
 现有方案 [Manyana](https://github.com/avilliai/Manyana) 已经完成对接
 #### Manyana用户操作指北
-请根据你的Bert_vits_sever/characters.yaml填写Manyana/config/settings.yaml，在bert_speakers填写所有你bert_vits中可用的角色<br>
+请根据你的characters.yaml填写Manyana/config/settings.yaml，在bert_speakers填写所有你bert_vits中可用的角色<br>
 先启动Manyana，随后执行 启动脚本.bat 即可<br>
 指令格式： xx说XXXXXXXXX 
   
