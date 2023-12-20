@@ -28,7 +28,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 - 双击启动脚本.bat<br>
 #### 更新
 双击update.bat
-## 3、压缩包部署
+## 3、压缩包部署(不推荐，基本不更新)
 文件比较大github放不下，自带一个azusa模型。压缩包部署将不支持获取github更新<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
