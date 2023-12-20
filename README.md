@@ -14,7 +14,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 ```
 下面获取必要文件，也可以从2.1提供的压缩包中获取，以确保git能够提供稳定更新支持
 #### 1.2下载必要文件
-从[Huggingface](https://huggingface.co/avillia/bbb/resolve/main/bert/chinese-roberta-wwm-ext-large) **下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large文件夹**
+从[Huggingface]https://huggingface.co/avillia/bbb/tree/main/bert/chinese-roberta-wwm-ext-large) **下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large文件夹**
 - flax_model.msgpack
 - pytorch_model.bin
 - tf_model.h5<br>
