@@ -46,7 +46,8 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 如新增一个otto语音模型则
   - logs/otto/G_114514.pth
   - logs/otto/config.json
-**以及，务必填写characters.yaml**
+
+**以及，务必填写characters.yaml，在其中建立对你的模型的索引**
 # 使用
   要使用你的模型，需要在使用时传入对应的参数
 ## 对接到QQ机器人
