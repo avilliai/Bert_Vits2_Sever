@@ -35,3 +35,9 @@ otto:
     - logs/diana/G_4800.pth
     - logs/diana/config.json
   lang: "[ZH]"
+剑魔:
+  speaker: Aatrox
+  model:
+    - logs/jianmo/G_2000.pth
+    - logs/jianmo/config.json
+  lang: "[ZH]"
