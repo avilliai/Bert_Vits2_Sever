@@ -14,7 +14,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 ```
 下面获取必要文件，也可以从2.1提供的压缩包中获取，以确保git能够提供稳定更新支持
 #### 1.2下载必要文件
-从[Huggingface](https://huggingface.co/spaces/XzJosh/Azusa-Bert-VITS2/tree/main/bert/chinese-roberta-wwm-ext-large) **下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large文件夹**
+从[Huggingface](https://huggingface.co/avillia/bbb/tree/main/bert/chinese-roberta-wwm-ext-large)  **下载如下三个文件并放入bert/chinese-roberta-wwm-ext-large文件夹**
 - flax_model.msgpack
 - pytorch_model.bin
 - tf_model.h5<br>
@@ -28,7 +28,7 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 - 双击启动脚本.bat<br>
 #### 更新
 双击update.bat
-## 3、压缩包部署
+## 3、压缩包部署(不推荐，基本不更新)
 文件比较大github放不下，自带一个azusa模型。压缩包部署将不支持获取github更新<br>
 1、下载bert_vits2_sever.rar
 - 进群628763673群文件下载
@@ -46,11 +46,13 @@ git clone https://github.com/avilliai/Bert_Vits2_Sever.git
 如新增一个otto语音模型则
   - logs/otto/G_114514.pth
   - logs/otto/config.json
-**以及，务必填写characters.yaml**
+
+**以及，务必填写characters.yaml，在其中建立对你的模型的索引**
 # 使用
   要使用你的模型，需要在使用时传入对应的参数
 ## 对接到QQ机器人
-现有方案 [Manyana](https://github.com/avilliai/Manyana) 已经完成对接
+现有方案 [Manyana](https://github.com/avilliai/Manyana) 已经完成对接<br>
+你也可以使用[berglm](https://github.com/avilliai/Bergml) 对接，它是一个打包好的exe文件
 #### Manyana用户操作指北
 请根据你的characters.yaml填写Manyana/config/settings.yaml，在bert_speakers填写所有你bert_vits中可用的角色<br>
 先启动Manyana，随后执行 启动脚本.bat 即可<br>
