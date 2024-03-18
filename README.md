@@ -3,6 +3,94 @@
 - [Bert_vits2](https://github.com/fishaudio/Bert-VITS2)
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
+## 2024/3/18更新
+不需要再自己部署服务了，运行下面几行代码，你就能实现非本地运行的bert_vits2语音合成
+```
+import asyncio
+
+import httpx
+
+
+async def modelscopeTTS(data):
+    speaker = data.get("speaker")
+    text = data.get("text")
+    if text == "" or text == " ":
+        text = "哼哼"
+    if speaker == "阿梓":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Azusa-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Azusa-Bert-VITS2-2.3/gradio/file="
+    elif speaker == "otto":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-Bert-VITS2-2.3/gradio/file="
+    elif speaker == "塔菲":
+        speaker="永雏塔菲"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2-2.3/gradio/file="
+    elif speaker == "星瞳":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/2568-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/2568-Bert-VITS2/gradio/file="
+    elif speaker == "丁真":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/DZ-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/DZ-Bert-VITS2-2.3/gradio/file="
+    elif speaker == "东雪莲":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2.0.2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2.0.2/gradio/file="
+    elif speaker == "嘉然":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-Bert-VITS2-2.3/gradio/file="
+    elif speaker == "孙笑川":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/SXC-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/SXC-Bert-VITS2/gradio/file="
+    elif speaker == "鹿鸣":
+        speaker="Lumi"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Lumi-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Lumi-Bert-VITS2/gradio/file="
+    elif speaker == "文静":
+        speaker="Wenjing"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Wenjing-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Wenjing-Bert-VITS2/gradio/file="
+    elif speaker == "亚托克斯":
+        speaker="Aatrox"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Aatrox-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Aatrox-Bert-VITS2/gradio/file="
+    elif speaker=="奶绿":
+        speaker="明前奶绿"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-Bert-VITS2-2.3/gradio/file="
+    elif speaker == "七海":
+        speaker = "Nana7mi"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-Bert-VITS2/gradio/file="
+    elif speaker=="恬豆":
+        speaker="Bekki"
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Bekki-Bert-VITS2/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Bekki-Bert-VITS2/gradio/file="
+    elif speaker=="科比":
+        url = "https://www.modelscope.cn/api/v1/studio/xzjosh/Kobe-Bert-VITS2-2.3/gradio/run/predict"
+        newurp = "https://www.modelscope.cn/api/v1/studio/xzjosh/Kobe-Bert-VITS2-2.3/gradio/file="
+    data = {
+        "data": ["<zh>" + text, speaker, 0.5, 0.5, 0.9, 1, "ZH", None, "Happy", "Text prompt", "", 0.7],
+        "event_data": None,
+        "fn_index": 0,
+        "dataType": ["textbox", "dropdown", "slider", "slider", "slider", "slider", "dropdown", "audio", "textbox",
+                     "radio", "textbox", "slider"],
+        "session_hash": "xjwen214wqf"
+    }
+    p = '12.wav'
+    #print(p)
+    async with httpx.AsyncClient(timeout=200) as client:
+        r = await client.post(url, json=data)
+        print(r.json())
+        newurl = newurp + r.json().get("data")[1].get("name")
+
+        async with httpx.AsyncClient(timeout=200) as client:
+            r = await client.get(newurl)
+
+            with open(p, "wb") as f:
+                f.write(r.content)
+            return p
+asyncio.run(modelscopeTTS({"speaker":"塔菲","text":"关注塔菲喵"}))
+```
 ## 1、colab部署(推荐)
 [点击并依次运行即可](https://colab.research.google.com/drive/1n8lI6pOiDtli2zC5fL9PZ9TZqbOafqma?usp=sharing)
 ## 2、源码部署
