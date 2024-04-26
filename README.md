@@ -3,6 +3,8 @@
 - [Bert_vits2](https://github.com/fishaudio/Bert-VITS2)
 - [获取更多模型](https://www.bilibili.com/read/cv26912729/?jump_opus=1)
 # 部署
+## 224/4/26更新
+请移步[modelscope_tts](https://github.com/avilliai/modelscopeTTS)
 ## 2024/3/18更新
 不需要再自己部署服务了，运行下面几行代码，你就能实现非本地运行的bert_vits2语音合成
 ```
